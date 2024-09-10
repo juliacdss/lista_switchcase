@@ -12,11 +12,41 @@
     */
 
     //ENTRADA
-
-    
+    const perguntas = [
+                "Telefonou para a vítima?",
+                "Esteve no local do crime?",
+                "Mora perto da vítima?",
+                "Devia para a vítima?",
+                "Já trabalhou com a vítima?"
+            ];
+  
     //PROCESSAMENTO
-
+    let respostasPositivas = 0;
+    for (let i = 0; i < perguntas.length; i++) {
+                let resposta = prompt(perguntas[i] + " (sim/não)").toLowerCase();
+                if (resposta === 'sim') {
+                    respostasPositivas++;
+                }
+            }
 
     //SAÍDA
+    let classificacao;
+    switch (respostasPositivas) {
+        case 5:
+        classificacao = "Assassino";
+            break;
+        case 3:
+        classificacao = "Cúmplice";
+            break;
+        case 4:
+        classificacao = "Cúmplice";
+            break;
+        case 2:
+        classificacao = "Suspeita";
+            break;
+        default:
+        classificacao = "Inocente";
+            }
+    alert("Você é " + classificacao);
 
 </script>
