@@ -6,20 +6,15 @@
     */
 
     // ENTRADA
-    const caractere = prompt(`Informe um caractere:`);
+    const caractere = prompt(`Informe um caractere:`).toLowerCase();
     
     // PROCESSAMENTO
     switch (caractere) {
-        case 'a':
-        case 'A':     
-        case 'e':
-        case 'E':    
+        case 'a':   
+        case 'e':  
         case 'i':
-        case 'I':
         case 'o':
-        case 'O':
         case 'u':
-        case 'U':
         alert(caractere + " é uma vogal.");
             break;
     
